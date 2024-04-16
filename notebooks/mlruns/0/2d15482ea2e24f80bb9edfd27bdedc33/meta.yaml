@@ -1,0 +1,15 @@
+artifact_uri: file:///c:/Users/ferna/.vscode/GitHub/a01110946/MushroomDataset/notebooks/mlruns/0/2d15482ea2e24f80bb9edfd27bdedc33/artifacts
+end_time: 1712800752560
+entry_point_name: ''
+experiment_id: '0'
+lifecycle_stage: active
+run_id: 2d15482ea2e24f80bb9edfd27bdedc33
+run_name: Logistic Regression
+run_uuid: 2d15482ea2e24f80bb9edfd27bdedc33
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1712800623904
+status: 4
+tags: []
+user_id: ferna

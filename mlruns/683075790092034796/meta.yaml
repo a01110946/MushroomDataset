@@ -1,0 +1,7 @@
+artifact_location: file:///c:\Users\ferna\.vscode\GitHub\a01110946\MushroomDataset\mlruns/683075790092034796
+creation_time: 1712767044039
+experiment_id: '683075790092034796'
+last_update_time: 1712799222554
+lifecycle_stage: active
+name: mushroom_classification
+tags: {}

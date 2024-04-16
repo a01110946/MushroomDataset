@@ -1,0 +1,15 @@
+artifact_uri: file:///c:\Users\ferna\.vscode\GitHub\a01110946\MushroomDataset\mlruns/683075790092034796/66e478c225db4ca3a9a9ef76181f356c/artifacts
+end_time: 1712771719272
+entry_point_name: ''
+experiment_id: '683075790092034796'
+lifecycle_stage: active
+run_id: 66e478c225db4ca3a9a9ef76181f356c
+run_name: merciful-lamb-876
+run_uuid: 66e478c225db4ca3a9a9ef76181f356c
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1712771715182
+status: 3
+tags: []
+user_id: ferna

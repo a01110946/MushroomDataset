@@ -1,0 +1,15 @@
+artifact_uri: file:///c:\Users\ferna\.vscode\GitHub\a01110946\MushroomDataset\mlruns/683075790092034796/ff40bf0bf991479a806cc6a14bc10e69/artifacts
+end_time: 1712776735574
+entry_point_name: ''
+experiment_id: '683075790092034796'
+lifecycle_stage: active
+run_id: ff40bf0bf991479a806cc6a14bc10e69
+run_name: unruly-skink-929
+run_uuid: ff40bf0bf991479a806cc6a14bc10e69
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1712771719292
+status: 3
+tags: []
+user_id: ferna

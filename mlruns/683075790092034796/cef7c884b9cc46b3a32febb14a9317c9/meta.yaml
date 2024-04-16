@@ -1,0 +1,15 @@
+artifact_uri: file:///c:\Users\ferna\.vscode\GitHub\a01110946\MushroomDataset\mlruns/683075790092034796/cef7c884b9cc46b3a32febb14a9317c9/artifacts
+end_time: 1712771706907
+entry_point_name: ''
+experiment_id: '683075790092034796'
+lifecycle_stage: active
+run_id: cef7c884b9cc46b3a32febb14a9317c9
+run_name: inquisitive-loon-202
+run_uuid: cef7c884b9cc46b3a32febb14a9317c9
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1712767175623
+status: 4
+tags: []
+user_id: ferna

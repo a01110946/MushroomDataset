@@ -1,0 +1,16 @@
+artifact_uri: file:///c:\Users\ferna\.vscode\GitHub\a01110946\MushroomDataset\mlruns/574946008245930031/9992ad0825e845358d24716b389a5420/artifacts
+deleted_time: 1712766167728
+end_time: null
+entry_point_name: ''
+experiment_id: '574946008245930031'
+lifecycle_stage: deleted
+run_id: 9992ad0825e845358d24716b389a5420
+run_name: bright-toad-66
+run_uuid: 9992ad0825e845358d24716b389a5420
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1712764464653
+status: 1
+tags: []
+user_id: ferna

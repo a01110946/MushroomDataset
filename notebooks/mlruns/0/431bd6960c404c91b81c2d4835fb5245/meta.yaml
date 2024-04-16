@@ -1,0 +1,15 @@
+artifact_uri: file:///c:/Users/ferna/.vscode/GitHub/a01110946/MushroomDataset/notebooks/mlruns/0/431bd6960c404c91b81c2d4835fb5245/artifacts
+end_time: 1712808043388
+entry_point_name: ''
+experiment_id: '0'
+lifecycle_stage: active
+run_id: 431bd6960c404c91b81c2d4835fb5245
+run_name: MLP Classifier
+run_uuid: 431bd6960c404c91b81c2d4835fb5245
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1712807581554
+status: 3
+tags: []
+user_id: ferna

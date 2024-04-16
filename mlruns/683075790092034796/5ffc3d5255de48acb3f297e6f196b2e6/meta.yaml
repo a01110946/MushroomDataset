@@ -1,0 +1,15 @@
+artifact_uri: file:///c:\Users\ferna\.vscode\GitHub\a01110946\MushroomDataset\mlruns/683075790092034796/5ffc3d5255de48acb3f297e6f196b2e6/artifacts
+end_time: 1712767175605
+entry_point_name: ''
+experiment_id: '683075790092034796'
+lifecycle_stage: active
+run_id: 5ffc3d5255de48acb3f297e6f196b2e6
+run_name: burly-crane-873
+run_uuid: 5ffc3d5255de48acb3f297e6f196b2e6
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1712767167596
+status: 3
+tags: []
+user_id: ferna

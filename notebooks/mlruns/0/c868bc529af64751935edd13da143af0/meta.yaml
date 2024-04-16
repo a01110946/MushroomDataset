@@ -1,0 +1,15 @@
+artifact_uri: file:///c:/Users/ferna/.vscode/GitHub/a01110946/MushroomDataset/notebooks/mlruns/0/c868bc529af64751935edd13da143af0/artifacts
+end_time: 1712805799463
+entry_point_name: ''
+experiment_id: '0'
+lifecycle_stage: active
+run_id: c868bc529af64751935edd13da143af0
+run_name: Decision Tree
+run_uuid: c868bc529af64751935edd13da143af0
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1712805753217
+status: 3
+tags: []
+user_id: ferna

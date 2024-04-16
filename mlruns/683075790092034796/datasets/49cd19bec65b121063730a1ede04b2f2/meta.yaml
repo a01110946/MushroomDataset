@@ -1,0 +1,15 @@
+digest: f56bb354
+name: dataset
+profile: '{"num_rows": 11146, "num_elements": 122606}'
+schema: '{"mlflow_colspec": [{"type": "string", "name": "cap-shape", "required": true},
+  {"type": "string", "name": "cap-surface", "required": false}, {"type": "string",
+  "name": "cap-color", "required": true}, {"type": "string", "name": "does-bruise-or-bleed",
+  "required": true}, {"type": "string", "name": "gill-attachment", "required": false},
+  {"type": "string", "name": "gill-color", "required": true}, {"type": "string", "name":
+  "stem-color", "required": true}, {"type": "string", "name": "has-ring", "required":
+  true}, {"type": "string", "name": "ring-type", "required": false}, {"type": "string",
+  "name": "habitat", "required": true}, {"type": "string", "name": "season", "required":
+  true}]}'
+source: '{"tags": {"mlflow.user": "ferna", "mlflow.source.name": "c:\\Users\\ferna\\.vscode\\GitHub\\a01110946\\MushroomDataset\\env\\env_mlops\\Lib\\site-packages\\ipykernel_launcher.py",
+  "mlflow.source.type": "LOCAL"}}'
+source_type: code

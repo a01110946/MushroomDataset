@@ -1,0 +1,15 @@
+artifact_uri: file:///c:\Users\ferna\.vscode\GitHub\a01110946\MushroomDataset\mlruns/683075790092034796/903cafb6cbbe41e2971ce571664d79ed/artifacts
+end_time: 1712786299389
+entry_point_name: ''
+experiment_id: '683075790092034796'
+lifecycle_stage: active
+run_id: 903cafb6cbbe41e2971ce571664d79ed
+run_name: funny-bird-5
+run_uuid: 903cafb6cbbe41e2971ce571664d79ed
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1712786283045
+status: 3
+tags: []
+user_id: ferna

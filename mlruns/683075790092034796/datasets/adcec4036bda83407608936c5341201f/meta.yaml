@@ -1,0 +1,9 @@
+digest: 4c4eef7b
+name: dataset
+profile: '{"num_rows": 11146, "num_elements": 33438}'
+schema: '{"mlflow_colspec": [{"type": "double", "name": "cap-diameter", "required":
+  true}, {"type": "double", "name": "stem-height", "required": true}, {"type": "double",
+  "name": "stem-width", "required": true}]}'
+source: '{"tags": {"mlflow.user": "ferna", "mlflow.source.name": "c:\\Users\\ferna\\.vscode\\GitHub\\a01110946\\MushroomDataset\\env\\env_mlops\\Lib\\site-packages\\ipykernel_launcher.py",
+  "mlflow.source.type": "LOCAL"}}'
+source_type: code

@@ -1,0 +1,15 @@
+artifact_uri: file:///c:\Users\ferna\.vscode\GitHub\a01110946\MushroomDataset\mlruns/683075790092034796/2de919d50857411fad2abf1891a61040/artifacts
+end_time: 1712791738025
+entry_point_name: ''
+experiment_id: '683075790092034796'
+lifecycle_stage: active
+run_id: 2de919d50857411fad2abf1891a61040
+run_name: Baseline Model Evaluation
+run_uuid: 2de919d50857411fad2abf1891a61040
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1712791737768
+status: 3
+tags: []
+user_id: ferna

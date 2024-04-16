@@ -1,0 +1,15 @@
+artifact_uri: file:///c:\Users\ferna\.vscode\GitHub\a01110946\MushroomDataset\mlruns/683075790092034796/4eea531d29554f279b3e360776ffd6a9/artifacts
+end_time: 1712786411288
+entry_point_name: ''
+experiment_id: '683075790092034796'
+lifecycle_stage: active
+run_id: 4eea531d29554f279b3e360776ffd6a9
+run_name: puzzled-stork-461
+run_uuid: 4eea531d29554f279b3e360776ffd6a9
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1712786408588
+status: 3
+tags: []
+user_id: ferna

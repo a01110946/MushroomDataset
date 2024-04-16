@@ -1,0 +1,8 @@
+artifact_location: c:/Users/ferna/.vscode/GitHub/a01110946/MushroomDataset/mlruns
+creation_time: 1712763863435
+experiment_id: '624244681824120213'
+last_update_time: 1712767025590
+lifecycle_stage: deleted
+name: mushroom_classification
+tags:
+  data: mushrooms

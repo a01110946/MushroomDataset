@@ -1,0 +1,16 @@
+artifact_uri: file:///c:\Users\ferna\.vscode\GitHub\a01110946\MushroomDataset\mlruns/570123823669004345/9b6977504d714ba3a9ffb434789ca9d6/artifacts
+deleted_time: 1712767023641
+end_time: 1712766885361
+entry_point_name: ''
+experiment_id: '570123823669004345'
+lifecycle_stage: deleted
+run_id: 9b6977504d714ba3a9ffb434789ca9d6
+run_name: resilient-yak-618
+run_uuid: 9b6977504d714ba3a9ffb434789ca9d6
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1712766868813
+status: 3
+tags: []
+user_id: ferna

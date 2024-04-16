@@ -1,0 +1,25 @@
+artifact_path: model
+flavors:
+  sklearn:
+    code: null
+    pickled_model: model.pkl
+    serialization_format: cloudpickle
+    sklearn_version: 1.4.1.post1
+mlflow_version: 2.11.3
+model_size_bytes: 1637
+model_uuid: cd862ce3ef244966a5e315fec0fe1390
+run_id: ff40bf0bf991479a806cc6a14bc10e69
+signature:
+  inputs: '[{"type": "string", "name": "cap-shape", "required": true}, {"type": "string",
+    "name": "cap-surface", "required": false}, {"type": "string", "name": "cap-color",
+    "required": true}, {"type": "string", "name": "does-bruise-or-bleed", "required":
+    true}, {"type": "string", "name": "gill-attachment", "required": false}, {"type":
+    "string", "name": "gill-color", "required": true}, {"type": "string", "name":
+    "stem-color", "required": true}, {"type": "string", "name": "has-ring", "required":
+    true}, {"type": "string", "name": "ring-type", "required": true}, {"type": "string",
+    "name": "habitat", "required": true}, {"type": "string", "name": "season", "required":
+    true}]'
+  outputs: '[{"type": "tensor", "tensor-spec": {"dtype": "float64", "shape": [-1,
+    83]}}]'
+  params: null
+utc_time_created: '2024-04-10 19:18:51.871101'
