@@ -1,0 +1,67 @@
+MushroomDataset
+³   .gitignore
+³   requirements.txt
+³   README.md
+ÃÄÄÄdata
+³   ÃÄÄÄprimary_data.csv
+³   ÃÄÄÄprimary_data_meta.txt
+³   ÃÄÄÄsecondary_data.csv
+³   ÀÄÄÄsecondary_data_meta.txt
+ÃÄÄÄenv
+³   ÀÄÄÄenv_mlops
+³       ÃÄÄÄetc
+³       ÀÄÄÄ... # more directories and files regarding the virtual environment
+ÃÄÄÄmlruns
+³   ÃÄÄÄ.trash
+³   ³   ÃÄÄÄ225828532496014960
+³   ³   ÃÄÄÄ570123823669004345
+³   ³   ³   ÀÄÄÄ9b6977504d714ba3a9ffb434789ca9d6
+³   ³   ³       ÃÄÄÄartifacts
+³   ³   ³       ÃÄÄÄmetrics
+³   ³   ³       ÃÄÄÄparams
+³   ³   ³       ÀÄÄÄtags
+³   ³   ÃÄÄÄ574946008245930031
+³   ³   ³   ÀÄÄÄ9992ad0825e845358d24716b389a5420
+³   ³   ³       ÃÄÄÄartifacts
+³   ³   ³       ÃÄÄÄmetrics
+³   ³   ³       ÃÄÄÄparams
+³   ³   ³       ÀÄÄÄtags
+³   ³   ÀÄÄÄ624244681824120213
+³   ³       ÀÄÄÄtags
+³   ÃÄÄÄ0
+³   ÃÄÄÄ683075790092034796
+³   ³   ÀÄÄÄff40bf0bf991479a806cc6a14bc10e69
+³   ³       ÃÄÄÄartifacts
+³   ³       ³   ÀÄÄÄmodel
+³   ³       ³       ÀÄÄÄmetadata
+³   ³       ÃÄÄÄinputs
+³   ³       ³   ÃÄÄÄ178c1e4a5e1fa2a2e07781d2c88df061
+³   ³       ³   ÀÄÄÄ5c7bf3c31a86c4a5f2af5b10be7769c0
+³   ³       ÃÄÄÄmetrics
+³   ³       ÃÄÄÄparams
+³   ³       ÀÄÄÄtags
+³   ÀÄÄÄmodels
+ÃÄÄÄnotebooks
+³   ³   baseline_model.ipynb
+³   ³   baseline_model_1.ipynb
+³   ³   baseline_model_2.ipynb
+³   ³   confusion_matrix_baseline.png
+³   ³   EDA.ipynb
+³   ³   FeatureMapperTransformer.py
+³   ³   model_experiments.ipynb
+³   ³   model_experiments_1.ipynb
+³   ³   utils.py
+³   ÀÄÄÄmlruns
+³       ÃÄÄÄ.trash
+³       ÀÄÄÄ0
+³           ÃÄÄÄ088976248ca347bb88822bd09812a85a
+³           ÀÄÄÄ... # more files
+ÀÄÄÄsrc
+    ÃÄÄÄ    config.py
+    ÃÄÄÄ    data_loading.py
+    ÃÄÄÄ    data_preprocessing.py
+    ÃÄÄÄ    logging_config.py
+    ÃÄÄÄ    model_evaluation.py
+    ÃÄÄÄ    model_prediction.py
+    ÃÄÄÄ    model_training.py
+    ÀÄÄÄ    pipeline.py

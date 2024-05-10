@@ -1,6 +1,9 @@
-pandas
-numpy
-matplotlib
-seaborn
-pydantic-settings
-pandas_profiling
+fastapi==0.111.0
+joblib==1.3.2
+matplotlib==3.8.3
+mlflow==2.11.3
+pandas==2.2.2
+rich==13.7.1
+scikit_learn==1.3.1
+scipy==1.13.0
+seaborn==0.13.2

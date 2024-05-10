@@ -111,3 +111,20 @@ Contiene los modelos entrenados.
 Contiene el entorno virtual con las dependencias del proyecto.
 
 - Entorno virtual con las dependencias del proyecto (opcional).
+
+## Running the Pipeline
+
+To run the pipeline and process your dataset, use the following command:
+
+```bash
+python src/pipeline.py --data_path path/to/your/dataset.csv
+```
+
+Replace path/to/your/dataset.csv with the actual path to your dataset file.
+For example, if your dataset file is named secondary_data.csv and is located in the data directory, run:
+
+```bash
+python src/pipeline.py --data_path data/secondary_data.csv
+```
+
+The pipeline will load the dataset, preprocess the data, train the model, evaluate its performance, and generate predictions.

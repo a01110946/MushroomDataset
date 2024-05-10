@@ -1,0 +1,15 @@
+artifact_uri: file:///c:/Users/ferna/.vscode/GitHub/a01110946/MushroomDataset/notebooks/mlruns/0/6a45b2623f8c4d41ab3e84903b504009/artifacts
+end_time: 1715222511490
+entry_point_name: ''
+experiment_id: '0'
+lifecycle_stage: active
+run_id: 6a45b2623f8c4d41ab3e84903b504009
+run_name: Gradient Boosting
+run_uuid: 6a45b2623f8c4d41ab3e84903b504009
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1715221412050
+status: 3
+tags: []
+user_id: ferna

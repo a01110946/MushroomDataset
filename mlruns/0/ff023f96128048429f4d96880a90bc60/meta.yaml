@@ -1,0 +1,15 @@
+artifact_uri: mlflow-artifacts:/0/ff023f96128048429f4d96880a90bc60/artifacts
+end_time: 1715301263644
+entry_point_name: ''
+experiment_id: '0'
+lifecycle_stage: active
+run_id: ff023f96128048429f4d96880a90bc60
+run_name: calm-seal-233
+run_uuid: ff023f96128048429f4d96880a90bc60
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1715301256215
+status: 3
+tags: []
+user_id: ferna

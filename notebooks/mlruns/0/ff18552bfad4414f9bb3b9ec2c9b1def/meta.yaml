@@ -1,0 +1,15 @@
+artifact_uri: file:///c:/Users/ferna/.vscode/GitHub/a01110946/MushroomDataset/notebooks/mlruns/0/ff18552bfad4414f9bb3b9ec2c9b1def/artifacts
+end_time: 1715221412028
+entry_point_name: ''
+experiment_id: '0'
+lifecycle_stage: active
+run_id: ff18552bfad4414f9bb3b9ec2c9b1def
+run_name: Random Forest
+run_uuid: ff18552bfad4414f9bb3b9ec2c9b1def
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1715221209965
+status: 3
+tags: []
+user_id: ferna
