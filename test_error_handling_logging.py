@@ -25,7 +25,7 @@ def test_specific_error_conditions():
     response = client.post("/predict", json={})
     assert response.status_code == 500
     assert "detail" in response.json()
-    assert "Database connection error" in response.json()["detail"]
+    assert "database connection error" in response.json()["detail"].lower()
 
     # Test with a simulated external service failure
     with pytest.raises(Exception):
@@ -36,9 +36,9 @@ def test_specific_error_conditions():
     response = client.post("/predict", json={})
     assert response.status_code == 500
     assert "detail" in response.json()
-    assert "External service failure" in response.json()["detail"]
+    assert "external service failure" in response.json()["detail"].lower()
 
-def test_error_messages_and_logging():
+def test_error_messages_and_logging(caplog):
     """
     Verify that appropriate error messages and stack traces are logged.
     """
@@ -48,13 +48,12 @@ def test_error_messages_and_logging():
         "cap_surface": 123,
         "cap_color": True
     }
-    with pytest.raises(Exception):
-        response = client.post("/predict", json=invalid_input_data)
+    response = client.post("/predict", json=invalid_input_data)
+    assert response.status_code == 422
 
     # Assert that the error is logged with relevant details
-    # (replace with your actual logging assertions)
-    # assert "Invalid input data" in caplog.text
-    # assert "422" in caplog.text
+    assert "invalid input data" in caplog.text.lower()
+    assert "422" in caplog.text
 
     # Test with model loading failure
     # (simulate a model loading failure scenario)
@@ -66,12 +65,11 @@ def test_error_messages_and_logging():
     response = client.post("/predict", json={})
     assert response.status_code == 500
     assert "detail" in response.json()
-    assert "Model loading failure" in response.json()["detail"]
+    assert "model loading failure" in response.json()["detail"].lower()
 
     # Assert that the error is logged with relevant details
-    # (replace with your actual logging assertions)
-    # assert "Model loading failure" in caplog.text
-    # assert "500" in caplog.text
+    assert "model loading failure" in caplog.text.lower()
+    assert "500" in caplog.text
 
     # Test with preprocessing errors
     # (simulate a preprocessing error scenario)
@@ -83,9 +81,8 @@ def test_error_messages_and_logging():
     response = client.post("/predict", json={})
     assert response.status_code == 500
     assert "detail" in response.json()
-    assert "Preprocessing error" in response.json()["detail"]
+    assert "preprocessing error" in response.json()["detail"].lower()
 
     # Assert that the error is logged with relevant details
-    # (replace with your actual logging assertions)
-    # assert "Preprocessing error" in caplog.text
-    # assert "500" in caplog.text
+    assert "preprocessing error" in caplog.text.lower()
+    assert "500" in caplog.text

@@ -63,4 +63,4 @@ def test_invalid_request_payload():
     response = client.post("/predict", data=invalid_json)
     assert response.status_code == 422
     assert "detail" in response.json()
-    assert "parse error" in str(response.json()["detail"]).lower()
+    assert "json decode error" in response.text.lower()

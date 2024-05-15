@@ -56,7 +56,7 @@ def test_invalid_data_types():
             response = client.post("/predict", json=input_data)
             assert response.status_code == 422
             assert "detail" in response.json()
-            assert field in str(response.json()["detail"])
+            assert field in str(response.json()["detail"]).lower()
 
 def test_out_of_range_values():
     """Test the /predict endpoint with out-of-range values."""
@@ -89,8 +89,9 @@ def test_out_of_range_values():
             input_data[field] = value
 
             response = client.post("/predict", json=input_data)
-            assert response.status_code == 200
-            assert "predictions" in response.json()
+            assert response.status_code == 422
+            assert "detail" in response.json()
+            assert field in str(response.json()["detail"]).lower()
 
     # Test categorical features with out-of-range values
     for field, out_of_range_values in categorical_test_cases.items():
@@ -106,4 +107,4 @@ def test_out_of_range_values():
             response = client.post("/predict", json=input_data)
             assert response.status_code == 422
             assert "detail" in response.json()
-            assert field in str(response.json()["detail"])
+            assert field in str(response.json()["detail"]).lower()

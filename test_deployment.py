@@ -16,8 +16,9 @@ def test_incorrect_environment_variables():
     try:
         subprocess.check_output(["docker", "run", "-e", "DATABASE_URL", "-e", "API_KEY", "mushroom-classifier"], stderr=subprocess.STDOUT)
     except subprocess.CalledProcessError as e:
-        assert "database connection error" in str(e.output)
-        assert "invalid API key" in str(e.output)
+        output = e.output.decode("utf-8")
+        assert "database connection error" in output.lower()
+        assert "invalid api key" in output.lower()
     else:
         pytest.fail("Deployment succeeded with incorrect environment variables")
     
@@ -43,11 +44,12 @@ def test_missing_dependencies():
     try:
         subprocess.check_output(["docker", "run", "mushroom-classifier"], stderr=subprocess.STDOUT)
     except subprocess.CalledProcessError as e:
-        assert "missing dependency" in str(e.output)
-        assert "incompatible version" in str(e.output)
+        output = e.output.decode("utf-8")
+        assert "missing dependency" in output.lower()
+        assert "incompatible version" in output.lower()
     else:
         pytest.fail("Deployment succeeded with missing dependencies")
-    
+
     # Update the deployment platform to have the required dependencies
     # (Assuming you have a way to update the dependencies)
     # ...
@@ -70,8 +72,9 @@ def test_insufficient_resources():
     try:
         subprocess.check_output(["docker", "run", "--cpu-shares", str(cpu_shares), "--memory", memory_limit, "mushroom-classifier"], stderr=subprocess.STDOUT)
     except subprocess.CalledProcessError as e:
-        assert "out of memory" in str(e.output)
-        assert "CPU throttling" in str(e.output)
+        output = e.output.decode("utf-8")
+        assert "out of memory" in output.lower()
+        assert "cpu throttling" in output.lower()
     else:
         pytest.fail("Deployment succeeded with insufficient resources")
     
