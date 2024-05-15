@@ -1,4 +1,8 @@
 # logging_config.py
+"""
+This module sets up the logging configuration for the project.
+It configures the root logger, handlers, and formatters for logging messages.
+"""
 
 import logging
 import sys

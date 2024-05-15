@@ -1,7 +1,7 @@
 from fastapi import FastAPI
 from pydantic import BaseModel
 import joblib
-from src.config import MODEL_PATH
+from src.utils.config import MODEL_PATH
 import pandas as pd
 
 app = FastAPI()

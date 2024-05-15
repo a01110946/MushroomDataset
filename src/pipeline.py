@@ -1,27 +1,34 @@
 # pipeline.py
+"""
+This module provides the main pipeline for the Mushroom Classification project.
+"""
 
 import argparse
 import logging
-from data_loading import load_data
-from data_preprocessing import delete_outliers
-from data_preprocessing import drop_unwanted_features
-from data_split import split_data
-from data_transformation import split_features
-from data_transformation import create_preprocessor
-from model_training import create_training_pipeline
-from model_training import train_model
-from model_training import save_model
-
-from model_evaluation import evaluate_model
-from config import MODEL_PATH
-from config import create_preprocessor
-from config import TRAIN_DATA
-from config import VAL_DATA
-from config import TEST_DATA
-from logging_config import setup_logging
-from sklearn.model_selection import train_test_split
 import pandas as pd
-from rich import print
+from src.data.data_loading import load_data
+from src.data.data_preprocessing import delete_outliers
+from src.data.data_preprocessing import drop_unwanted_features
+from src.data.data_split import split_data
+from src.data.data_transformation import split_features
+from src.data.data_transformation import create_preprocessor
+from src.models.model_training import create_training_pipeline
+from src.models.model_training import train_model
+from src.models.model_training import save_model
+from src.models.model_evaluation import evaluate_model
+from src.utils.config import MODEL_PATH
+from src.utils.config import create_preprocessor
+from src.utils.config import TRAIN_DATA
+from src.utils.config import VAL_DATA
+from src.utils.config import TEST_DATA
+from src.utils.logging_config import setup_logging
+from src.utils.mlflow_utils import (
+    start_mlflow_run,
+    log_mlflow_params,
+    log_mlflow_metrics,
+    log_mlflow_model,
+    end_mlflow_run,
+)
 
 def main(data_path):
     """
@@ -34,13 +41,13 @@ def main(data_path):
         python pipeline.py --data_path path/to/your/dataset.csv
 
     Example:
-        python pipeline.py --data_path data/inference_data.csv
+        python pipeline.py --data_path data/training_data.csv
     """
     try:
         # Set up logging
         setup_logging()
         logger = logging.getLogger(__name__)
-        
+
         # Load the dataset
         logger.info("Loading data...")
         try:
@@ -53,7 +60,7 @@ def main(data_path):
             logger.error(str(e))
             logger.error("Data loading failed. Please check the dataset file format.")
             return
-        
+
         # Preprocess the data
         logger.info("Preprocessing data...")
         try:
@@ -61,13 +68,14 @@ def main(data_path):
             df = delete_outliers(df)
 
             # Drop unwanted features
-            features_to_drop = ['cap-shape', 'does-bruise-or-bleed', 'gill-spacing', 'gill-color', 'stem-height', 'stem-color', 'ring-type', 'habitat', 'season']
+            features_to_drop = ['cap-shape', 'does-bruise-or-bleed', 'gill-spacing', 'gill-color',
+                                'stem-height', 'stem-color', 'ring-type', 'habitat', 'season']
             df = drop_unwanted_features(df, features_to_drop)
         except ValueError as e:
             logger.error(str(e))
             logger.error("Data preprocessing failed. Please check the required columns and data types.")
             return
-        
+
         # Split the data
         logger.info("Splitting data...")
         try:
@@ -82,7 +90,7 @@ def main(data_path):
             train_df = pd.concat([X_train, y_train], axis=1)
             val_df = pd.concat([X_val, y_val], axis=1)
             test_df = pd.concat([X_test, y_test], axis=1)
-            
+
             # Save the split datasets
             train_df.to_csv(TRAIN_DATA, index=False)
             val_df.to_csv(VAL_DATA, index=False)
@@ -91,7 +99,17 @@ def main(data_path):
             logger.error(str(e))
             logger.error("Data split failed.")
             return
-        
+
+        # Start an MLflow run
+        mlflow_run = start_mlflow_run(experiment_name="mushroom_classification", run_name="pipeline_run")
+
+        # Log MLflow parameters
+        log_mlflow_params({
+            "train_data_path": TRAIN_DATA,
+            "val_data_path": VAL_DATA,
+            "test_data_path": TEST_DATA,
+        })
+
         # Split features into numeric and categorical
         numeric_features, categorical_features = split_features(X_train)
 
@@ -103,17 +121,25 @@ def main(data_path):
         try:
              # Create the training pipeline
             pipeline = create_training_pipeline(preprocessor)
-            
+
             # Train the model
             trained_pipeline = train_model(pipeline, X_train, y_train)
         except ValueError as e:
             logger.error(str(e))
             logger.error("Model training failed. Please check the model hyperparameters.")
+            end_mlflow_run(mlflow_run)
             return
         except RuntimeError as e:
             logger.error(str(e))
             logger.error("Model training failed. Please check the convergence of the model.")
+            end_mlflow_run(mlflow_run)
             return
+
+        # Log model parameters
+        log_mlflow_params({
+            "model_type": "GradientBoostingClassifier",
+            "model_params": trained_pipeline.named_steps["classifier"].get_params(),
+        })
 
         # Save the trained model
         logger.info("Saving trained model...")
@@ -122,6 +148,7 @@ def main(data_path):
         except FileNotFoundError as e:
             logger.error(str(e))
             logger.error("Saving trained model failed. Please check the model save path.")
+            end_mlflow_run(mlflow_run)
             return
 
         # Evaluate the model
@@ -131,32 +158,24 @@ def main(data_path):
             logger.info("Evaluation Metrics:")
             for metric, value in eval_metrics.items():
                 logger.info(f"{metric}: {value:.4f}")
+                end_mlflow_run(mlflow_run)
         except ValueError as e:
             logger.error(str(e))
             logger.error("Model evaluation failed. Please check the input data.")
 
+        # Log evaluation metrics
+        log_mlflow_metrics(eval_metrics)
 
-        """
-        # Make predictions on new data
-        logger.info("Making predictions on new data...")
-        try:
-            new_data = ...  # Load or provide new data for prediction
-            predictions = predict(new_data, MODEL_PATH)
-            logger.info("Predictions:")
-            logger.info(predictions)
-        except FileNotFoundError as e:
-            logger.error(str(e))
-            logger.error("Prediction failed. Please check the trained model file path.")
-            return
-        except ValueError as e:
-            logger.error(str(e))
-            logger.error("Prediction failed. Please check the input data for prediction.")
-            return
-        """
-        
+        # Log the trained model
+        log_mlflow_model(trained_pipeline, "model")
+
+        # End MLflow run
+        end_mlflow_run()
+
     except Exception as e:
         logger.error("An unexpected error occurred:")
         logger.error(str(e))
+        end_mlflow_run()
         return
 
 if __name__ == "__main__":

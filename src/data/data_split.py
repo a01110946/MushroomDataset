@@ -1,4 +1,8 @@
 # data_split.py
+"""
+This module provides a function for splitting the dataset into train, validation,
+and test sets, which can be used for training and evaluating machine learning models.
+"""
 
 from sklearn.model_selection import train_test_split
 

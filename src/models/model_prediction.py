@@ -1,7 +1,11 @@
 # model_prediction.py
+"""
+This module provides functions for loading the trained model and making predictions
+on new data using the model. This script can be replaced by a route in the API.
+"""
 
 import joblib
-from data_preprocessing import preprocess_data
+from src.data.data_preprocessing import preprocess_data
 
 def load_model(model_path):
     """

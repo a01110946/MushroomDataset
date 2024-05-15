@@ -1,4 +1,8 @@
 # data_transformation.py
+"""
+This module contains functions for creating feature transformers and preprocessors
+for the mushroom dataset.
+"""
 
 from sklearn.compose import ColumnTransformer
 from sklearn.impute import SimpleImputer

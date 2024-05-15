@@ -1,0 +1,133 @@
+MushroomDataset
+³   .gitignore
+³   Dockerfile
+³   pipeline.log
+³   preprocessed_data.csv
+³   README.md
+³   requirements.txt
+³   updated_project_structure.txt
+³   
+ÃÄÄÄ.github
+³   ÀÄÄÄworkflows
+³           ci-cd.yml
+³           
+ÃÄÄÄ.pytest_cache
+³   ³   .gitignore
+³   ³   CACHEDIR.TAG
+³   ³   README.md
+³   ³   
+³   ÀÄÄÄv
+³       ÀÄÄÄcache
+³               lastfailed
+³               nodeids
+³               stepwise
+³               
+ÃÄÄÄapi
+³   ³   main.py
+³   ³   request_test.py
+³   ³   
+³   ÀÄÄÄ__pycache__
+³           main.cpython-311.pyc
+³           
+ÃÄÄÄdata
+³   ÃÄÄÄprocessed_data
+³   ³       test.csv
+³   ³       test_data.csv
+³   ³       train.csv
+³   ³       val.csv
+³   ³       
+³   ÀÄÄÄraw
+³           primary_data.csv
+³           primary_data_meta.txt
+³           secondary_data.csv
+³           secondary_data_meta.txt
+³           
+ÃÄÄÄdocs
+³       directory_structure.txt
+³       Gu¡a Proyecto Final MLOps DSA COECYTJAL (1).pdf
+³       project_structure_proposal.txt
+³       Rubrica _ Proyecto Individual _ MLOps _ DSA COECYTJAL.pdf
+³       
+ÃÄÄÄenv
+³   ÃÄÄÄenv_mlops
+³   ³   ³   pyvenv.cfg
+³       # ... more directories and files
+³                       
+ÃÄÄÄmodels
+³       model.pkl
+³       model.pkl_preprocessor
+³       
+ÃÄÄÄnotebooks
+³   ³   baseline_model.ipynb
+³   ³   baseline_model_1.ipynb
+³   ³   baseline_model_2.ipynb
+³   ³   confusion_matrix_baseline.png
+³   ³   EDA.ipynb
+³   ³   FeatureMapperTransformer.py
+³   ³   model_experiments.ipynb
+³   ³   model_experiments_1.ipynb
+³   ³   model_experiments_1.py
+³   ³   model_experiments_2.ipynb
+³   ³   utils.py
+³   ³   
+³   ÀÄÄÄmlruns
+³       ÃÄÄÄ... # more directories and files
+³                       
+ÃÄÄÄoutput
+³       metrics.json
+³       
+ÃÄÄÄsrc
+³   ³   main.py
+³   ³   pipeline.py
+³   ³   __init__.py
+³   ³
+³   ÃÄÄÄdata
+³   ³       data_loading.py
+³   ³       data_preprocessing.py
+³   ³       data_split.py
+³   ³       data_transformation.py
+³   ³       __init__.py
+³   ³
+³   ÃÄÄÄmodels
+³   ³       model_evaluation.py
+³   ³       model_prediction.py
+³   ³       model_training.py
+³   ³       __init__.py
+³   ³
+³   ÃÄÄÄutils
+³   ³   ³   config.py
+³   ³   ³   logging_config.py
+³   ³   ³   __init__.py
+³   ³   ³
+³   ³   ÀÄÄÄ__pycache__
+³   ³           config.cpython-311.pyc
+³   ³           __init__.cpython-311.pyc
+³   ³
+³   ÀÄÄÄ__pycache__
+³           config.cpython-311.pyc
+³           data_loading.cpython-311.pyc
+³           data_preprocessing.cpython-311.pyc
+³           data_split.cpython-311.pyc
+³           data_transformation.cpython-311.pyc
+³           logging_config.cpython-311.pyc
+³           main.cpython-311.pyc
+³           model_evaluation.cpython-311.pyc
+³           model_prediction.cpython-311.pyc
+³           model_training.cpython-311.pyc
+³           __init__.cpython-311.pyc
+³           
+ÀÄÄÄtests
+    ³   test_api.py
+    ³   test_api_endpoints.py
+    ³   test_cicd_pipeline.py
+    ³   test_deployment.py
+    ³   test_docker_building_pushing.py
+    ³   test_error_handling_logging.py
+    ³   test_failing.py
+    ³   test_invalid_input.py
+    ³   test_model_loading.py
+    ³   test_preprocessing_prediction.py
+    ³   
+    ÀÄÄÄ__pycache__
+            test_api.cpython-311-pytest-8.2.0.pyc
+            

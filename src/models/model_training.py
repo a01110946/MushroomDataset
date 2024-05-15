@@ -1,4 +1,8 @@
 # model_training.py
+"""
+This module provides functions for creating the training pipeline, training the model,
+and saving the trained model to a file.
+"""
 
 import joblib
 from sklearn.pipeline import Pipeline

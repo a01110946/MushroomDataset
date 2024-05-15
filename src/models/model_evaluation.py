@@ -1,10 +1,13 @@
 # model_evaluation.py
-
+"""
+This module contains functions for evaluating the trained model on the test set
+and saving the evaluation metrics to a file.
+"""
 from sklearn.metrics import accuracy_score
 from sklearn.metrics import precision_score
 from sklearn.metrics import recall_score
 from sklearn.metrics import f1_score
-from config import METRICS_PATH
+from src.utils.config import METRICS_PATH
 import json
 
 def evaluate_model(model, X_test, y_test):

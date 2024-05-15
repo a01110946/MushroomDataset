@@ -1,4 +1,7 @@
 # data_loading.py
+"""
+This module provides functions for loading the mushroom dataset.
+"""
 
 import os
 import pandas as pd

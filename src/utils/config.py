@@ -1,4 +1,8 @@
 # config.py
+"""
+This module contains configuration variables and settings for the project.
+It includes data paths, model parameters, and output paths
+"""
 
 import os
 from sklearn.compose import ColumnTransformer
